@@ -3,10 +3,8 @@
 A responsive blog post card layout built with HTML & CSS.
 
 ## 🔗 Live Demo
-[Click here to view](https://YOUR_USERNAME.github.io/blog-cards/)
+[Click here to view](https://swedhi.github.io/Web_dev_Assign/)
 
-## 📸 Preview
-![Preview](preview.png)
 
 ## 🛠️ Built With
 - HTML5
