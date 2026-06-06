@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Cards</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Lato', sans-serif;
+      padding: 40px 20px;
+    }
+
+    /* Subtle overlay to match the warm brownish tone of the original */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: rgba(160, 100, 60, 0.38);
+      z-index: 0;
+    }
+
+    .cards-container {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      gap: 24px;
+      align-items: stretch;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      width: 260px;
+      height: 420px;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-img {
+      width: 100%;
+      height: 175px;
+      object-fit: cover;
+      display: block;
+      flex-shrink: 0;
+    }
+
+    .card-body {
+      padding: 18px 20px 16px;
+      text-align: center;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .card-date {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 12px;
+    }
+
+    .card-text {
+      font-size: 12.5px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 14px 10px;
+      color: #fff;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .stat-num {
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 9px;
+      letter-spacing: 1px;
+      font-weight: 700;
+      opacity: 0.85;
+    }
+
+    /* Card 1 - Pink footer */
+    .card-1 .card-date { color: #e05a8a; }
+    .card-1 .card-footer { background: #e05a8a; }
+
+    /* Card 2 - Orange footer */
+    .card-2 .card-date { color: #e07830; }
+    .card-2 .card-footer { background: #e07830; }
+
+    /* Card 3 - Green footer */
+    .card-3 .card-date { color: #5cb85c; }
+    .card-3 .card-footer { background: #5cb85c; }
+  </style>
+</head>
+<body>
+  <div class="cards-container">
+
+    <!-- Card 1 -->
+    <div class="card card-1">
+      <img class="card-img" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Snowy Mountains">
+      <div class="card-body">
+        <div class="card-date">4 days ago</div>
+        <div class="card-title">Post One</div>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur. Ducimus, repudiandae temporibus omnis illum maxime quod deserunt eligendi dolor</p>
+      </div>
+      <div class="card-footer">
+        <div class="stat">
+          <span class="stat-num">4<sup style="font-size:10px">th</sup></span>
+          <span class="stat-label">READ</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">5123</span>
+          <span class="stat-label">VIEWS</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">32</span>
+          <span class="stat-label">COMMENTS</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card card-2">
+      <img class="card-img" src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&q=80" alt="Desert landscape">
+      <div class="card-body">
+        <div class="card-date">1 week ago</div>
+        <div class="card-title">Post Two</div>
+        <p class="card-text">Adipisicing elit. Ducimus, repudiandae corrupti amet temporibus provident illum maxime quod. Lorem ipsum dolor</p>
+      </div>
+      <div class="card-footer">
+        <div class="stat">
+          <span class="stat-num">7<sup style="font-size:10px">th</sup></span>
+          <span class="stat-label">READ</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">7152</span>
+          <span class="stat-label">VIEWS</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">21</span>
+          <span class="stat-label">COMMENTS</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card card-3">
+      <img class="card-img" src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&q=80" alt="Forest path">
+      <div class="card-body">
+        <div class="card-date">3 weeks ago</div>
+        <div class="card-title">Post Three</div>
+        <p class="card-text">Repudiandae corrupti amet temporibus omnis provident illum maxime. Ducimus, lorem ipsum dolor adipiscing elit</p>
+      </div>
+      <div class="card-footer">
+        <div class="stat">
+          <span class="stat-num">5<sup style="font-size:10px">th</sup></span>
+          <span class="stat-label">READ</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">3021</span>
+          <span class="stat-label">VIEWS</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">15</span>
+          <span class="stat-label">COMMENTS</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
